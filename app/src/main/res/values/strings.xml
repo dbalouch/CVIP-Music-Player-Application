@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="song_title">Song Title</string>
+    <string-array name="song_titles">
+        <item>Song 1</item>
+        <item>Song 2</item>
+        <item>Song 3</item>
+        <!-- Add more song titles as needed -->
+    </string-array>
+</resources>

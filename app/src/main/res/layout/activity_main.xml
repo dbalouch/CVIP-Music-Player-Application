@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+    <!-- Top Header with Album Art and Controls -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Album Art -->
+        <ImageView
+            android:id="@+id/albumArtLarge"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/albumart"
+            tools:ignore="ContentDescription" />
+
+        <!-- Play/Pause Button (Large) -->
+        <ImageButton
+            android:id="@+id/playPauseButtonLarge"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="22dp"
+            android:layout_toStartOf="@id/albumArtLarge"
+            android:src="@drawable/play"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <!-- Next Button -->
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="27dp"
+            android:layout_toEndOf="@id/albumArtLarge"
+            android:src="@drawable/next"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <!-- Other Controls: Skip, Previous, Shuffle, Repeat -->
+        <!-- Add your controls here -->
+
+    </RelativeLayout>
+
+    <!-- Song List View -->
+    <ListView
+        android:id="@+id/songListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+
+    <!-- Mini Player Bar -->
+    <RelativeLayout
+        android:id="@+id/miniPlayerBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white">
+
+        <!-- Mini Album Art -->
+        <ImageView
+            android:id="@+id/miniAlbumArt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/albumart"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            tools:ignore="ContentDescription" />
+
+        <!-- Mini Song Title -->
+        <TextView
+            android:id="@+id/miniSongTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/miniAlbumArt"
+            android:text="@string/song_title"
+            tools:ignore="RelativeOverlap" />
+
+        <!-- Mini Player Controls: Previous Button (Small) -->
+        <ImageButton
+            android:id="@+id/previousButtonSmall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/nextButtonSmall"
+            android:src="@drawable/previous"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <!-- Mini Player Controls: Play/Pause Button (Small) -->
+        <ImageButton
+            android:id="@+id/playPauseButtonSmall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/nextButtonSmall"
+            android:layout_toEndOf="@id/previousButtonSmall"
+            android:src="@drawable/play"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <!-- Mini Player Controls: Next Button (Small) -->
+        <ImageButton
+            android:id="@+id/nextButtonSmall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/next"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <!-- Add other mini player controls here -->
+
+    </RelativeLayout>
+
+</LinearLayout>
